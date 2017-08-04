@@ -18,7 +18,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/wedding',function(req,res){
-    res.send("***WEDDING PLANERS are waiting for you..***");
+     res.sendFile(path.join(__dirname, 'ui', 'wedding.html'));
 });
 
 app.get('/pandit',function(req,res){
