@@ -1,5 +1,5 @@
-var express = require('express');
-var morgan = require('morgan');
+var express = require('express');//lib for listening ports and req,responses
+var morgan = require('morgan');//lib for log to app
 var path = require('path');
 
 var app = express();
@@ -20,6 +20,15 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/wedding',function(req,res){
     res.send("***WEDDING PLANERS are waiting for you..***");
 });
+
+app.get('/pandit',function(req,res){
+    res.send("*** we help you in finding pandits for your occation ***");
+});
+
+app.get('/caterer',function(req,res){
+    res.send("*** Deliciuos food is just a click away ..yummy***");
+});
+
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
