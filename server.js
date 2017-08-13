@@ -5,15 +5,15 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var events ={ 
-    'wedding' : {
+var events= { 
+    'wedding1' : {
                 title :   'wedding.... | satD',
                 heading:  'Types',
                 content:` <p>There are many ways to count::</p>
                           <p>tarditional, registered, by StayToGether `
         
               },
-    'caterer' : {
+    'caterer1' : {
                 title :  'caterer | satD',
                 heading: 'Menu',
                 content:`<p>You wish we serve</p>
