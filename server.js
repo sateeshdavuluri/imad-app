@@ -5,12 +5,21 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var wedding = {
-    title : 'wedding.... | satD',
-    heading: 'Types',
-    content:` <p>There are many ways to count::</p>
-               <p>tarditional, registered, by StayToGether `,
-};
+var events ={ 
+    wedding : {
+                title :   'wedding.... | satD',
+                heading:  'Types',
+                content:` <p>There are many ways to count::</p>
+                          <p>tarditional, registered, by StayToGether `
+        
+              },
+    caterer : {
+                title :  'caterer | satD',
+                heading: 'Menu',
+                content:`<p>You wish we serve</p>
+                         <p>South Indi, North Indi, chinese, Chat,....</p>`
+    }
+    };
 
 
 function createTemplate(data){ 
