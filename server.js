@@ -30,7 +30,7 @@ app.get('/pandit',function(req,res){
 });
 
 app.get('/caterer',function(req,res){
-    res.send(path.join(__dirname,'ui','caterer.html'));
+    res.sendFile(path.join(__dirname,'ui','caterer.html'));
 });
 
 
