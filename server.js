@@ -6,14 +6,14 @@ var app = express();
 app.use(morgan('combined'));
 
 var events ={ 
-    wedding : {
+    'wedding' : {
                 title :   'wedding.... | satD',
                 heading:  'Types',
                 content:` <p>There are many ways to count::</p>
                           <p>tarditional, registered, by StayToGether `
         
               },
-    caterer : {
+    'caterer' : {
                 title :  'caterer | satD',
                 heading: 'Menu',
                 content:`<p>You wish we serve</p>
@@ -74,8 +74,9 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/wedding',function(req,res){
-     res.send(createTemplate(wedding));
+app.get('/:events',function(req,res){
+     var  eventsName = req.params.eventsName;
+     res.send(createTemplate(events[eventName]));
 });
 
 app.get('/pandit',function(req,res){
