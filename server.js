@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var wedding = {
-    title : 'wedding | satD',
+    title : 'wedding.... | satD',
     heading: 'Types',
     content:` <p>There are many ways to count::</p>
                 `,
