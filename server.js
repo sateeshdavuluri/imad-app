@@ -76,7 +76,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 app.get('/:eventsName',function(req,res){
      var eventsName = req.params.eventsName;
-     res.send(createTemplate(events[eventName]));
+     res.send(createTemplate(events[eventsName]));
 });
 
 app.get('/pandit',function(req,res){
