@@ -75,7 +75,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/:eventsName',function(req,res){
-     var  eventsName = req.params.eventsName;
+     var eventsName = req.params.eventsName;
      res.send(createTemplate(events[eventName]));
 });
 
