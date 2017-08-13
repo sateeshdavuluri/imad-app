@@ -9,7 +9,7 @@ var wedding = {
     title : 'wedding.... | satD',
     heading: 'Types',
     content:` <p>There are many ways to count::</p>
-                `,
+               <p>tarditional, registered, by StayToGether `,
 };
 
 
