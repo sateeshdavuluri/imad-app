@@ -30,7 +30,7 @@ app.get('/pandit',function(req,res){
 });
 
 app.get('/caterer',function(req,res){
-    res.send("*** Deliciuos food is just a click away ..yummy***");
+    res.send(path.join(__dirname,'ui','caterer.html'));
 });
 
 
