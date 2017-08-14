@@ -79,14 +79,6 @@ app.get('/:eventsName',function(req,res){
      res.send(createTemplate(events[eventsName]));
 });
 
-app.get('/pandit',function(req,res){
-    res.send("*** we help you in finding pandits for your occation ***");
-});
-
-app.get('/caterer',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','caterer.html'));
-});
-
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
