@@ -6,14 +6,14 @@ var app = express();
 app.use(morgan('combined'));
 
 var events= { 
-    'wedding1' : {
+    'wedding1':{
                 title :   'wedding.... | satD',
                 heading:  'Types',
                 content:` <p>There are many ways to count::</p>
                           <p>tarditional, registered, by StayToGether `
         
               },
-    'caterer1' : {
+    'caterer1':{
                 title :  'caterer | satD',
                 heading: 'Menu',
                 content:`<p>You wish we serve</p>
