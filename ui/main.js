@@ -32,6 +32,6 @@ touch.onClick=function(){
    
    //render the count in span 
    counter = counter + 1;
-   var span = document.getElementById('count');
-   span.innerHTML = counter;
+   var spa = document.getElementById('count');
+   spa.innerHTML = counter;
 };
