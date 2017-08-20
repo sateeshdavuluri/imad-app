@@ -25,6 +25,7 @@ var counter = 0;
 
 touch.onClick=function(){
    //make req counter
+   var request = new XMLHttpRequest();
    
    //complete the response and store it in a varible
    
@@ -32,5 +33,5 @@ touch.onClick=function(){
    //render the count in span 
    counter = counter + 1;
    var span = document.getElementById('count');
-   span.innerHTML = counter.toString();
+   span.innerHTML = counter;
 };
