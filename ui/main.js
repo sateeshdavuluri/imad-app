@@ -24,7 +24,7 @@ var touch = document.getElementById('touch-button');
 var counter = 1;
 
 touch.onclick=function(){
-    alert("hellow");
+   
    //make req counter
    //var request = new XMLHttpRequest();
    
@@ -34,5 +34,5 @@ touch.onclick=function(){
    //render the count in span 
    counter = counter + 1;
    var span = document.getElementById('count');
-   span.innerHTML= " HE";
+   span.innerHTML= counter.toString();
 };
