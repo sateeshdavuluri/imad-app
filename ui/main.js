@@ -2,4 +2,5 @@
 
 var element = document.getElementById('maintext');
 
-element.innerHtml='good Morning';
+element.innerHtml="good Morning"
+;
