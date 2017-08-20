@@ -1,4 +1,4 @@
 console.log('Loaded!');
 
-var elment = document.getEleentById("maintext");
+var elment = document.getElementById("maintext");
 element.internalhtml="good Morning";
