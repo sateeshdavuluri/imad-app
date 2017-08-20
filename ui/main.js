@@ -21,7 +21,7 @@ img.onclick = function() {
 */
 // counter code
 var touch = document.getElementById('touch-button');
-var counter = 0;
+var counter = 1;
 
 touch.onClick=function(){
    //make req counter
@@ -32,6 +32,6 @@ touch.onClick=function(){
    
    //render the count in span 
    counter = counter + 1;
-   var spa =document.getElementById('count');
-   spa.innerHTML = counter.toString();
+   var span = document.getElementById('count');
+   span.innerHTML = counter.toString();
 };
