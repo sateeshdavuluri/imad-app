@@ -33,5 +33,5 @@ touch.onClick=function(){
    //render the count in span 
    counter = counter + 1;
    var span = document.getElementById('count');
-   span.innerHTML= "1";
+   span.innerHTML= " HELLO";
 };
