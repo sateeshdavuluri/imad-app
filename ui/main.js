@@ -21,18 +21,55 @@ img.onclick = function() {
 */
 // counter code
 var touch = document.getElementById('touch-button');
-var counter = 0;
+
 
 touch.onclick=function(){
    
-   //make req counter
-   //var request = new XMLHttpRequest();
+   //create req counter
+   var request = new XMLHttpRequest();
    
    //complete the response and store it in a varible
+   request.onreadystatechange= function(){
+       
+       if(request.readystate === XMLHttpRequest.Done){
+         if(request.status === 200){
+             var counter = request.responseText;
+             var span = document.getElementById('count');
+                 span.innerHTML= counter.toString();
+             
+         }
+       }
+   };
    
-   
-   //render the count in span 
-   counter = counter + 1;
-   var span = document.getElementById('count');
-   span.innerHTML= counter.toString();
+   //make req 
+  request.open('GET','http://sateeshdavuluri.imad.hasura-app.io/counter',true);
+  request.send(null);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
