@@ -6,7 +6,9 @@ element.innerHTML="good Morning";
 
 var img= document.getElementById('madi');
 
-img.onclick = function() {
+function moveright(){
     img.style.marginLeft = '100px';
-    
+}
+img.onclick = function() {
+    var interval = setInterval(moveright,50);
 };
