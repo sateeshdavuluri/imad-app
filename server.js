@@ -21,6 +21,13 @@ var events= {
     }
     };
 
+var counter =0;
+app.get('/counter', function(req,res){
+  counter = counter + 1;
+  res.send(counter.toString());
+});
+
+
 
 function createTemplate(data){ 
 
@@ -84,11 +91,6 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-var counter =0;
-app.get('/counter', function(req,res){
-  counter = counter + 1;
-  res.send(counter.toString());
-});
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
