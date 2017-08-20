@@ -22,6 +22,7 @@ img.onclick = function() {
 // counter code
 var touch = document.getElementById('touch-button');
 var counter = 0;
+
 touch.onClick=function(){
    //make req counter
    
