@@ -1,5 +1,5 @@
 console.log('Loaded!');
-
+/*
 // change main text
 var element = document.getElementById('main-text');
 
@@ -18,3 +18,4 @@ img.onclick = function() {
     // img.style.marginLeft = '100px';
     //to move img its CSS been modified
 };
+*/
