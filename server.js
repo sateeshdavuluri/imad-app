@@ -46,6 +46,7 @@ var htmlTemplate = `
                 <div>
                    <h3> ${heading}
                    </h3>
+                   </hr>
                 </div>
 
                 <div>
