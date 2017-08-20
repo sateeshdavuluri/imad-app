@@ -5,10 +5,12 @@ var element = document.getElementById('main-text');
 element.innerHTML="good Morning";
 
 var img= document.getElementById('madi');
-
-function moveright(){
-    img.style.marginLeft = '100px';
+var marginLeft = 0;
+function moveRight(){
+    marginLeft += 10;
+    img.style.marginLeft = margiLeft +'px';
 }
 img.onclick = function() {
-    var interval = setInterval(moveright,50);
+    var interval = setInterval(moveRight,50);
+    // img.style.marginLeft = '100px';
 };
