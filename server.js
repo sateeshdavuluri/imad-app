@@ -24,7 +24,7 @@ var events= {
 
 function createTemplate(data){ 
 
-var title=data.title;
+var title = data.title;
 var heading = data.heading;
 var content = data.content;
 
