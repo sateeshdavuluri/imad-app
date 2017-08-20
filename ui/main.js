@@ -23,7 +23,7 @@ img.onclick = function() {
 var touch = document.getElementById('touch-button');
 var counter = 1;
 
-touch.onClick=function(){
+touch.onclick=function(){
     alert("hellow");
    //make req counter
    //var request = new XMLHttpRequest();
