@@ -14,7 +14,7 @@ function moveRight(){
     img.style.marginLeft = marginLeft +'px';
 }
 img.onclick = function() {
-    var interval = setInterval(moveRight,50); //for every 50 ms moveRight func called
+    var interval = setInterval(moveRight,25); //for every 50 ms moveRight func called
     // img.style.marginLeft = '100px';
     //to move img its CSS been modified
 };
