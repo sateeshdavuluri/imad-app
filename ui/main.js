@@ -19,3 +19,16 @@ img.onclick = function() {
     //to move img its CSS been modified
 };
 */
+// counter code
+var touch = document.getElementById('touch-button');
+touch.onClick=function(){
+   //make req counter
+   
+   //complete the response and store it in a varible
+   
+   
+   //render the count in span 
+   counter = counter + 1;
+   var span = document.getElementById('count');
+   span.innerHTML = counter.toString();
+};
