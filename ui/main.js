@@ -46,6 +46,7 @@ touch.onclick=function(){
   request.send(null);
 };
 
+//input and submit
 var nameInput = document.getElementById('name');
 var name = nameInput.value;
 
