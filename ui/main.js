@@ -2,4 +2,4 @@ console.log('Loaded!');
 
 var element = document.getElementById('main-text');
 
-element.innerHtml="good Morning";
+element.innerHTML="good Morning";
