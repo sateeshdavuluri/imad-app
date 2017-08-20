@@ -1,6 +1,5 @@
 // console.log('Loaded!');
 
-var element = document.getElementById('maintext');
+var element = document.getElementById("main-text");
 
-element.innerHtml="good Morning"
-;
+element.innerHtml = "good Morning" ;
