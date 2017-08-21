@@ -69,6 +69,17 @@ return htmlTemplate;
 }
 
 
+var names =[];
+app.get('/submit-name/:name', function(req,resp){
+  //get the name from request
+  var name = req.params.name;
+  
+  names.push(name);
+  
+  //JSON: JAVA SCRIPT OBJECT NOTIFICATION
+  res.send(JSON.stringify(names));
+});
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -92,9 +103,7 @@ app.get('/ui/main.js', function (req, res) {
 });
 
 
-app.get('/submit-name',function(req,resp){
-    
-});
+
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
