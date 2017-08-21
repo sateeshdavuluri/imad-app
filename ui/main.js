@@ -74,7 +74,7 @@ submit.onclick = function(){
                 
             } else {
                 for(var j=0,i=names.length;j<10;i--,j++){
-                    list += '<li>' + names[i] +" "+'</li>';
+                    list += '<li>' + names[i-1] +" "+'</li>';
                 }
             }
            
