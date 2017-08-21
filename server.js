@@ -27,6 +27,16 @@ app.get('/counter', function(req,res){
   res.send(counter.toString());
 });
 
+var names =[];
+app.get('/submit-name/:name', function(req,resp){
+  //get the name from request
+  var name = req.params.name;
+  
+  names.push(name);
+  
+  //JSON: JAVA SCRIPT OBJECT NOTIFICATION
+  res.send(JSON.stringify(names));
+});
 
 
 function createTemplate(data){ 
@@ -69,16 +79,6 @@ return htmlTemplate;
 }
 
 
-var names =[];
-app.get('/submit-name/:name', function(req,resp){
-  //get the name from request
-  var name = req.params.name;
-  
-  names.push(name);
-  
-  //JSON: JAVA SCRIPT OBJECT NOTIFICATION
-  res.send(JSON.stringify(names));
-});
 
 
 app.get('/', function (req, res) {
