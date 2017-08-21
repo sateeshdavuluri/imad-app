@@ -40,6 +40,8 @@ app.get('/submit-name', function(req,res){  //url /submit-name?name=xxxx
 });
 
 
+
+//html template 
 function createTemplate(data){ 
 
 var title = data.title;
