@@ -67,9 +67,17 @@ submit.onclick = function(){
             names = JSON.parse(names);
             var list ="";
             
-            for(var i=names.length;i>0;i--){
-                list += '<li>' + names[i-1] +" "+'</li>';
+            if(names.length<=10){
+                for(var i=names.length;i>0;i--){
+                    list += '<li>' + names[i-1] +" "+'</li>';
+                }
+                
+            } else {
+                for(var i=10;i>0;i--){
+                    list += '<li>' + names[i-1] +" "+'</li>';
+                }
             }
+            
             var ul = document.getElementById('namelist');
             ul.innerHTML = list;
          }
