@@ -73,11 +73,11 @@ submit.onclick = function(){
                 }
                 
             } else {
-                for(var i=10;i>0;i--){
-                    list += '<li>' + names[i-1] +" "+'</li>';
+                for(var j=0,i=names.length;j<10;i--,j++){
+                    list += '<li>' + names[i] +" "+'</li>';
                 }
             }
-            
+           
             var ul = document.getElementById('namelist');
             ul.innerHTML = list;
          }
