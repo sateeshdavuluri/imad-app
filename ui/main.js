@@ -46,6 +46,7 @@ touch.onclick=function(){
   request.send(null);
 };
 
+
 //input and submit
 var nameInput = document.getElementById('name');
 var name = nameInput.value;
@@ -53,16 +54,34 @@ var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     //make req to server and send name
+     //create req counter
+   var request = new XMLHttpRequest();
+   
+   //complete the response and store it in a varible
+   request.onreadystatechange= function(){
+       
+       if(request.readystate === XMLHttpRequest.Done){
+         if(request.status === 200){
+            
+            // capture and render the names as a list
+            var names = 
+            var list ="";
+            
+            for(var i=0;i<names.length;i++){
+                list += '<li>' + names[i] +'</li>';
+            }
+            var ul = document.getElementById('namelist');
+            ul.innerHTML = list;
+         }
+       }
+   };
+   
+   //make req 
+  request.open('GET','http://sateeshdavuluri.imad.hasura-app.io/submit-name?name='+ name,true);
+  request.send(null);
+  
+  
     
-    // capture and render the names as a list
-    var names =["sat1","sat2","sat3"];
-    var list ="";
-    
-    for(var i=0;i<names.length;i++){
-        list += '<li>' + names[i] +'</li>';
-    }
-    var ul = document.getElementById('namelist');
-    ul.innerHTML = list;
 };
 
 
