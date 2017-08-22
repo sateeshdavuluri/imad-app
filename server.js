@@ -39,6 +39,11 @@ app.get('/submit-name', function(req,res){  //url /submit-name?name=xxxx
   res.send(JSON.stringify(names));
 });
 
+app.get('/favicon.ico',function(req,res){
+    res.senFile(path.join(__dirname,'ui','favicon.ico'));
+});
+
+
 
 
 //html template 
@@ -103,10 +108,6 @@ app.get('/:eventsName',function(req,res){
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
-
-app.get('/favicon.ico',function(req,res){
-    res.senFile(path.join(__dirname,'ui','favicon.ico'));
 });
 
 
