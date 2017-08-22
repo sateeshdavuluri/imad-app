@@ -39,6 +39,8 @@ app.get('/favicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
 });
 
+
+
 //database pool connect
 var pool = new Pool(config);
 app.get('/test-db', function(req,res){
@@ -128,11 +130,14 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+//data passed here through dataase
 app.get('/events/:eventsName',function(req,res){
      var eventsName = req.params.eventsName;
      
-     // in sql query - appers in title then add single quotes to variable
-     pool.query("SELECT * FROM events where title = '" + req.params.eventsName+"'",function(err,result){
+     // in sql query " - " appers in title then add single quotes to variable
+     // sql injection  ';DELETE from "events" where 'a' = 'a 
+     //to protect from sql injection pg librarysuggess to add "$1" for ' ' variable in array 
+     pool.query("SELECT * FROM events where title = $1", [req.params.eventsName],function(err,result){
          if(err){
              res.status(500).send(err.toString());
          } else {
