@@ -132,7 +132,7 @@ app.get('/events/:eventsName',function(req,res){
      var eventsName = req.params.eventsName;
      
      // in sql query - appers in title then add single quotes to variable
-     pool.query("SELECT * FROM events where title =" + req.params.eventsName,function(err,result){
+     pool.query("SELECT * FROM events where title = '" + req.params.eventsName+"'",function(err,result){
          if(err){
              res.status(500).send(err.toString());
          } else {
