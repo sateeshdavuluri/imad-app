@@ -2,7 +2,7 @@ var express = require('express');//lib for listening ports and req,responses
 var morgan = require('morgan');//lib for log to app
 var path = require('path');
 
-var Pool = require(pg).Pool; //to connect db node-postgres
+var Pool = require('pg').Pool; //to connect db node-postgres
 var config ={
     user : 'sateeshdavuluri',
     database : 'sateeshdavuluri',
