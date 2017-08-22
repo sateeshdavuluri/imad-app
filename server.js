@@ -39,7 +39,7 @@ app.get('/favicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
 });
 
-
+//database pool connect
 var pool = new Pool(config);
 app.get('/test-db', function(req,res){
    // make a select request
@@ -61,7 +61,7 @@ var events= {
                 title :   'wedding.... | satD',
                 heading:  'Types',
                 content:` <p>There are many ways to count::</p>
-                          <p>tarditional, registered, by StayToGether `
+                          <p>tarditional, registered, by StayToGether</p> `
         
               },
     'caterer1':{
@@ -128,9 +128,22 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/:eventsName',function(req,res){
+app.get('/events/:eventsName',function(req,res){
      var eventsName = req.params.eventsName;
-     res.send(createTemplate(events[eventsName]));
+     
+     pool.query("SELECT * FROM events where title =" + req.params.eventsName,function(err,result){
+         if(err){
+             res.status(500).send(err.toString());
+         } else {
+             if(result.rows ===0){
+                 res.status(404).send(" :) Events Page Not Found");
+             } else {
+                 var eventsData = result.rows[0];
+                 res.send(createTemplate(eventsData));
+             }
+         }
+     });
+     
 });
 
 app.get('/ui/main.js', function (req, res) {
