@@ -2,24 +2,19 @@ var express = require('express');//lib for listening ports and req,responses
 var morgan = require('morgan');//lib for log to app
 var path = require('path');
 
+var Pool = require(pg).Pool; //to connect db node-postgres
+var config ={
+    user : 'sateeshdavuluri',
+    database : 'sateeshdavuluri',
+    host :'db.imad.hasura-app.io',
+    port : '5432'
+    password : process.env.DB_PASSWORD;
+}
+
+
 var app = express();
 app.use(morgan('combined'));
 
-var events= { 
-    'wedding1':{
-                title :   'wedding.... | satD',
-                heading:  'Types',
-                content:` <p>There are many ways to count::</p>
-                          <p>tarditional, registered, by StayToGether `
-        
-              },
-    'caterer1':{
-                title :  'caterer | satD',
-                heading: 'Menu',
-                content:`<p>You wish we serve</p>
-                         <p>South Indi, North Indi, chinese, Chat,....</p>`
-    }
-    };
 
 var counter =0;
 app.get('/counter', function(req,res){
@@ -44,6 +39,38 @@ app.get('/favicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
 });
 
+
+var pool = new Pool(config)
+app.get('/test-db', function(){
+   // make a sect request
+   
+   //return response
+    pool.query('SELECT * FROM test',function(err,result){
+      if(err) {
+          res.status(500).send(err.toString());
+      } else{
+          res.send(JSON.stringify(result));
+      }
+    });
+});
+
+
+
+var events= { 
+    'wedding1':{
+                title :   'wedding.... | satD',
+                heading:  'Types',
+                content:` <p>There are many ways to count::</p>
+                          <p>tarditional, registered, by StayToGether `
+        
+              },
+    'caterer1':{
+                title :  'caterer | satD',
+                heading: 'Menu',
+                content:`<p>You wish we serve</p>
+                         <p>South Indi, North Indi, chinese, Chat,....</p>`
+    }
+    };
 
 
 //html template 
