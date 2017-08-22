@@ -40,10 +40,9 @@ app.get('/submit-name', function(req,res){  //url /submit-name?name=xxxx
 });
 
 
-app.get('/favicon.ico',function(req,res){
-    res.senFile(path.join(__dirname,'ui','favicon.ico'));
+app.get('/favicon.ico', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
 });
-
 
 
 
