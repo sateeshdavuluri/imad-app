@@ -67,6 +67,7 @@ submit.onclick = function(){
             names = JSON.parse(names);
             var list ="";
             
+            // 10 recent comment to show
             if(names.length<=10){
                 for(var i=names.length;i>0;i--){
                     list += '<li>' + names[i-1] +" "+'</li>';
