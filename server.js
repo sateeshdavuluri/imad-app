@@ -2,6 +2,7 @@ var express = require('express');//lib for listening ports and req,responses
 var morgan = require('morgan');//lib for log to app
 var path = require('path');
 var crypto = require('crypto') // library fo hashing in noejs
+var bodyParser = require('body-parser');
 
 var Pool = require('pg').Pool; //to connect db node-postgres
 var config ={
@@ -12,11 +13,10 @@ var config ={
     password : process.env.DB_PASSWORD
 };
 
-var crypto = require('crypto');
 
 var app = express();
 app.use(morgan('combined'));
-
+app.use(bodyParser.json());
 
 var counter =0;
 app.get('/counter', function(req,res){
@@ -49,6 +49,8 @@ function hash(input,salt){
   return ["pbkdf2","10000",salt,hashed.toString('hex')].join('$');
     
 }
+
+
 app.get('/hash/:input',function(req,res){
     
     var hashedString =hash(req.params.input,"salt-it-with-love");
@@ -57,6 +59,27 @@ app.get('/hash/:input',function(req,res){
 });
 
 
+
+app.post('/create-user',function(req,res){      //post to insert into request
+    
+    //username password
+    //JSON body parser
+    var username = req.body.username;
+    var password = req.body.password;
+    
+    var salt = crypto.randomBytes(128).toString('hex');
+    var dbString = hash(input,salt);
+    pool.query('INSERT INTO "user"(username,password) VALUES($1,$2)',[username,dbString] ,function(err,result){
+        
+        if(err) {
+          res.status(500).send(err.toString());
+      } else{
+          
+          res.send("User successfullycreated" + username);
+      }
+    });
+    
+});
 
 //database pool connect
 var pool = new Pool(config);
