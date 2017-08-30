@@ -92,25 +92,28 @@ app.post('/login',function(req,res){      //app.post to insert into request
     pool.query('SELECT * FROM "user" WHERE username= $1',[username] ,function(err,result){
         
         if(err) {
-          res.status(500).send(err.toString());
-        } else{
-          if(result.rows.length === 0){
-             res.send(403).send("username/password is invalid");
-            } else {
-              // match password
-              var dbSring = result.rows[0].password;
-              var salt = dbstring.split("$")[2];
-              var hashedString =hash(password,salt); // hash created basd on ps submitted and original salt
-              if(hashedString === dbString){
-                  res.send("Credentials are Correct");
-                } else {
-                        res.send(403).send("username/password is invalid");
-                       }
-             }
-          }
+            res.status(500).send(err.toString());
+        } 
+        else{
+              if(result.rows.length === 0){
+                 res.send(403).send("username/password is invalid");
+              } 
+              else {
+                  // match password
+                  var dbSring = result.rows[0].password;
+                  var salt = dbstring.split("$")[2];
+                  var hashedString =hash(password,salt); // hash created basd on ps submitted and original salt
+                  if(hashedString === dbString){
+                      res.send("Credentials are Correct");
+                  } 
+                  else {
+                            res.send(403).send("username/password is invalid");
+                           }
+               }
+            }
              
-          
-      }
+        
+      
     });
     
 });
