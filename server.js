@@ -43,7 +43,7 @@ app.get('/favicon.ico', function (req, res) {
 
 function hash(input,salt){
    //how to create a hash
-   var hashed = cryptp.pbkdf2Sync('password','salt-it-with-love',100000,512,'sha512');
+   var hashed = cryptp.pbkdf2Sync(input,salt,100000,512,'sha512');
   
   return hashed.toString('hex');
     
