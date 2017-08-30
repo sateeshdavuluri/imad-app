@@ -1,7 +1,7 @@
 var express = require('express');//lib for listening ports and req,responses
 var morgan = require('morgan');//lib for log to app
 var path = require('path');
-var crypto = require('crypto')
+var crypto = require('crypto') // library fo hashing in noejs
 
 var Pool = require('pg').Pool; //to connect db node-postgres
 var config ={
@@ -46,7 +46,7 @@ function hash(input,salt){
    //how to create a hash
    var hashed = crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
   
-  return hashed.toString('hex');
+  return pbkdf2,10000,salt,hashed.toString('hex');
     
 }
 app.get('/hash/:input',function(req,res){
