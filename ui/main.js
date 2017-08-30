@@ -97,8 +97,8 @@ submit.onclick = function(){
 // Login username pswrd
 
 
-var submit = document.getElementById('login_btn');
-submit.onclick = function(){
+var login = document.getElementById('login_btn');
+login.onclick = function(){
     //make req to server and send name
      //create req counter
    var request = new XMLHttpRequest();
