@@ -97,7 +97,7 @@ submit.onclick = function(){
 // Login username pswrd
 
 
-var submit = document.getElementById('submit_btn');
+var submit = document.getElementById('login_btn');
 submit.onclick = function(){
     //make req to server and send name
      //create req counter
@@ -111,19 +111,18 @@ submit.onclick = function(){
             console.log("user logged-in");
             element("Logged-in Successfully!");
             
-         }
-         else if(request.status === 403){
-             element("username / password is invalid ");
-         } else if(request.status === 500){
-             element("Something is wrong with the Server");
-         }
+             }
+             else if(request.status === 403){
+                 element("username / password is invalid ");
+             } else if(request.status === 500){
+                 element("Something is wrong with the Server");
+             }
          
          
-            var ul = document.getElementById('namelist');
-            ul.innerHTML = list;
-         }
-       }
-   };
+            
+        }
+      };
+};
    
    //make req 
   var username = document.getElementById('username').value;
