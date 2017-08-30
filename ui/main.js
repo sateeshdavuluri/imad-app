@@ -22,7 +22,6 @@ img.onclick = function() {
 // counter code
 var touch = document.getElementById('touch-button');
 
-
 touch.onclick=function(){
    
    //create req counter
@@ -48,7 +47,6 @@ touch.onclick=function(){
 
 
 //input and submit
-
 
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
@@ -96,7 +94,48 @@ submit.onclick = function(){
     
 };
 
+// Login username pswrd
 
+
+var submit = document.getElementById('submit_btn');
+submit.onclick = function(){
+    //make req to server and send name
+     //create req counter
+   var request = new XMLHttpRequest();
+   
+   //complete the response and store it in a varible
+   request.onreadystatechange= function(){
+       
+       if(request.readystate === XMLHttpRequest.Done){
+         if(request.status === 200){
+            console.log("user logged-in");
+            element("Logged-in Successfully!");
+            
+         }
+         else if(request.status === 403){
+             element("username / password is invalid ");
+         } else if(request.status === 500){
+             element("Something is wrong with the Server");
+         }
+         
+         
+            var ul = document.getElementById('namelist');
+            ul.innerHTML = list;
+         }
+       }
+   };
+   
+   //make req 
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
+    console.log(username);
+    console.log(password);
+  request.open('POST','http://sateeshdavuluri.imad.hasura-app.io/login',true);
+  request.setRequestHeader('Content-Type','application/json');
+  request.send(JSON.stringify({username: username, password: password}));
+  
+  
 
 
 
