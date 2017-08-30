@@ -11,6 +11,7 @@ var config ={
     password : process.env.DB_PASSWORD
 };
 
+var crypto = require('crypto');
 
 var app = express();
 app.use(morgan('combined'));
@@ -37,6 +38,21 @@ app.get('/submit-name', function(req,res){  //url /submit-name?name=xxxx
 
 app.get('/favicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
+});
+
+
+function hash(input,salt){
+   //how to create a hash
+   var hashed = cryptp.pbkdf2Sync('password','salt-it-with-love',100000,512,'sha512');
+  
+  return hashed.toString('hex');
+    
+}
+app.get('hash/:input',function(req,res){
+    
+    var hashedString =hash(req.params.input,salt);
+    res.send(hashedString);
+    
 });
 
 
