@@ -94,9 +94,9 @@ submit.onclick = function(){
     
 };
 
+
+
 // Login username pswrd
-
-
 var login = document.getElementById('login_btn');
 login.onclick = function(){
     //make req to server and send name
@@ -109,13 +109,13 @@ login.onclick = function(){
        if(request.readystate === XMLHttpRequest.Done){
          if(request.status === 200){
             console.log("user logged-in");
-            element("Logged-in Successfully!");
+            alert("Logged-in Successfully!");
             
              }
              else if(request.status === 403){
-                 element("username / password is invalid ");
+                 alert("username / password is invalid ");
              } else if(request.status === 500){
-                 element("Something is wrong with the Server");
+                 alert("Something is wrong with the Server");
              }
          
          
@@ -128,8 +128,9 @@ login.onclick = function(){
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
 
-    console.log(username);
-    console.log(password);
+    console.log(username);  //for test/debugging only
+    console.log(password);  //for test/debugging
+    
   request.open('POST','http://sateeshdavuluri.imad.hasura-app.io/login',true);
   request.setRequestHeader('Content-Type','application/json');
   request.send(JSON.stringify({username: username, password: password}));
