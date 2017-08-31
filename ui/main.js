@@ -46,7 +46,7 @@ touch.onclick=function(){
 };
 
 
-//input and submit
+//input and submit comments
 
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
