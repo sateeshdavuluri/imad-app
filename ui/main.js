@@ -115,7 +115,7 @@ login.onclick = function(){
              else if(request.status === 403){
                  alert("username / password is invalid ");
              } else if(request.status === 500){
-                 alert("Something is wrong with the Server");
+                 alert("Something is wrong on the Server");
              }
          
          
