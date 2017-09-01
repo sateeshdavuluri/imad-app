@@ -57,7 +57,7 @@ submit.onclick = function(){
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
        
-       if(request.readystate === XMLHttpRequest.Done){
+       if(request.readystate === XMLHttpRequest.DONE){
          if(request.status === 200){
             
             // capture and render the names as a list
