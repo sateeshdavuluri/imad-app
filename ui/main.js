@@ -131,7 +131,7 @@ login.onclick = function(){
     console.log(username);  //for test/debugging only
     console.log(password);  //for test/debugging
     
-  request.open('GET', 'http://sateeshdavuluri.imad.hasura-app.io/login', true);
+  request.open('post', 'http://sateeshdavuluri.imad.hasura-app.io/login', true);
   request.setRequestHeader('Content-Type','application/json');
   request.send(JSON.stringify({username: username, password: password}));
   
