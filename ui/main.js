@@ -106,7 +106,7 @@ login.onclick = function(){
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
        
-       if(request.readystate === XMLHttpRequest.DONE){
+       if(request.readystate === XMLHttpRequest.Done){
          if(request.status === 200){
             console.log("user logged-in");
             alert("Logged-in Successfully!");
