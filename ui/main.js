@@ -131,9 +131,9 @@ logAuth.onclick = function(){
     console.log(username);  //for test/debugging only
     console.log(password);  //for test/debugging
     
-  request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/login", false);
+  request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/login", true);
   request.setRequestHeader('Content-Type','application/json');
-  request.send(JSON.stringify({ username: username, password: password }));
+  request.send(JSON.stringify({username: username, password: password}));
   
   
 
