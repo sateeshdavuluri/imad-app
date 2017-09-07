@@ -125,6 +125,7 @@ logAuth.onclick = function(){
       };
 };
    
+  var request = new XMLHttpRequest();  
    //make req 
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
@@ -132,7 +133,7 @@ logAuth.onclick = function(){
     console.log(username);  //for test/debugging only
     console.log(password);  //for test/debugging
     
-  var request = new XMLHttpRequest();  
+ 
   request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/login", true);
   request.setRequestHeader('Content-Type','application/json');
   request.send(JSON.stringify({username: username, password: password}));
