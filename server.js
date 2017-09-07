@@ -3,6 +3,7 @@ var morgan = require('morgan');//lib for log to app
 var path = require('path');
 var crypto = require('crypto'); // library fo hashing in noejs
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var Pool = require('pg').Pool; //to connect db node-postgres
 var config ={
@@ -17,6 +18,13 @@ var config ={
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    
+    secret: 'SomeRandomSecretValue',
+    cookie: {maxAge: 1000*60*60*24*30}
+    
+}));
+
 
 var counter =0;
 app.get('/counter', function(req,res){
@@ -104,8 +112,14 @@ app.post('/login',function(req,res){      //app.post to insert into request
                   var salt = dbString.split("$")[2];
                   var hashedString =hash(password,salt); // hash created basd on ps submitted and original salt
                   if(hashedString === dbString){
+                     
+                     //set the session
+                     req.session.auth = {userId: result.rows[0].id};
+                     
                       res.send("Credentials are Correct");
-                  } 
+                  
+                      
+                  }
                   else {
                         res.send(403).send("username/password is invalid");
                        }
@@ -117,6 +131,17 @@ app.post('/login',function(req,res){      //app.post to insert into request
     });
     
 });
+
+
+app.get('/check-login', function(req,res){
+    
+    if(req.session && req.session.auth && req.session.auth.userId){
+        res.send("you are logged-in: " + req.session.auth.userId.toString());
+    } else {
+        res.send("You are noy logged in");
+    }
+});
+
 
 
 //database pool connect
