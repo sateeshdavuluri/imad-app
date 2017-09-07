@@ -102,7 +102,7 @@ var logAuth = document.getElementById('login_btn');
 logAuth.onclick = function(){
     //make req to server and send name
      //create req counter
-   var request = new XMLHttpRequest();
+//   var request = new XMLHttpRequest();
    
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
