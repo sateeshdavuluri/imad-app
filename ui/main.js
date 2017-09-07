@@ -125,7 +125,7 @@ logAuth.onclick = function(){
       };
 };
    
-  var request = new XMLHttpRequest();  
+//  var request = new XMLHttpRequest();  
    //make req 
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
