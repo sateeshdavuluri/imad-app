@@ -97,7 +97,7 @@ submit.onclick = function(){
 
 
 // Login username pswrd
-var login = document.getElementById('submit_btn');
+var login = document.getElementById('login_btn');
 
 login.onClick=function(){
     //make req to server and send name
