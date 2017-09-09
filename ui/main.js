@@ -99,12 +99,12 @@ submit.onclick = function(){
 
 // Login username pswrd
 var logAuth = document.getElementById('login_btn');
-var request = new XMLHttpRequest();
+
 logAuth.onclick = function(){
     //make req to server and send name
      //create req counter
    
-   
+   var request = new XMLHttpRequest();
 
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
