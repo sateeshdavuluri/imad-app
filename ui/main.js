@@ -45,7 +45,7 @@ touch.onclick=function(){
   request.send(null);
 };
 
-/*
+
 //input and submit comments
 
 var submit = document.getElementById('submit_btn');
@@ -94,13 +94,12 @@ submit.onclick = function(){
     
 };
 
-*/
 
 
 // Login username pswrd
 var login = document.getElementById('login_btn');
 
-login.onClick = function(){
+login.onClick=function(){
     //make req to server and send name
      //create req counter
    
