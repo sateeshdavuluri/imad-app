@@ -143,7 +143,49 @@ login.onclick=function(){
   
 };  
   
+//new user registration
+var register = document.getElementById('register_btn');
 
+register.onclick=function(){
+    //make req to server and send name
+     //create req counter
+   
+   var request = new XMLHttpRequest();
+
+   //complete the response and store it in a varible
+   request.onreadystatechange= function(){
+       
+       if(request.readystate === XMLHttpRequest.Done){
+             
+             if(request.status === 200){
+                console.log("user Registered");
+                alert("user Registered Successfully!"); } 
+             
+             else if(request.status === 500){
+                     alert("Something is wrong on the Server"); }
+             
+       }
+       
+      };
+
+   
+
+    //make req 
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
+  //  console.log(username);  //for test/debugging only
+  //  console.log(password);  //for test/debugging
+    
+ 
+  request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/create-user", true);
+  request.setRequestHeader('Content-Type','application/json');
+  request.send(JSON.stringify({username: username, password: password}));
+
+
+    
+};  
+  
 
 
 
