@@ -132,8 +132,8 @@ login.onclick=function(){
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
 
-    console.log(username);  //for test/debugging only
-    console.log(password);  //for test/debugging
+  //  console.log(username);  //for test/debugging only
+  //  console.log(password);  //for test/debugging
     
  
   request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/login", true);
