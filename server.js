@@ -83,7 +83,7 @@ app.post('/create-user',function(req,res){      //post to insert into request
           res.status(500).send(err.toString());
       } else{
           
-          res.send("User successfullycreated" + username);
+          res.send("User successfully created" + username);
       }
     });
     
