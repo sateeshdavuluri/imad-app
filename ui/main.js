@@ -100,11 +100,6 @@ submit.onclick = function(){
 // Login username pswrd
 var logAuth = document.getElementById('login_btn');
 
-logAuth.onclick = function(){
-    //make req to server and send name
-     //create req counter
-   var request = new XMLHttpRequest();
-   
 //+++++
     //make req 
   var username = document.getElementById('username').value;
@@ -117,8 +112,14 @@ logAuth.onclick = function(){
   request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/login", true);
   request.setRequestHeader('Content-Type','application/json');
   request.send(JSON.stringify({username: username, password: password}));
-//+++++  
-  
+//+++++ 
+
+logAuth.onclick = function(){
+    //make req to server and send name
+     //create req counter
+   var request = new XMLHttpRequest();
+   
+
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
        
