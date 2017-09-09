@@ -142,6 +142,8 @@ login.onclick=function(){
 
   
 };  
+
+
   
 //new user registration
 var register = document.getElementById('register_btn');
