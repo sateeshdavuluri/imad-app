@@ -182,11 +182,13 @@ register.onclick=function(){
   //  console.log(username);  //for test/debugging only
   //  console.log(password);  //for test/debugging
     
- 
-  request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/create-user", true);
-  request.setRequestHeader('Content-Type','application/json');
-  request.send(JSON.stringify({username: username, password: password}));
-
+ if(username.toString() === "" || password.toString()===""){
+     alert("Username and password should not be empty");
+ } else {
+          request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/create-user", true);
+          request.setRequestHeader('Content-Type','application/json');
+          request.send(JSON.stringify({username: username, password: password}));
+        }
 
     
 };  
