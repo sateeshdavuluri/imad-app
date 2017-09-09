@@ -124,7 +124,7 @@ login.onClick=function(){
             
         }
       };
-};
+
    
 //+++++
     //make req 
@@ -140,7 +140,7 @@ login.onClick=function(){
   request.send(JSON.stringify({username: username, password: password}));
 //+++++ 
   
-  
+};  
   
 
 
