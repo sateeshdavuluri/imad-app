@@ -113,6 +113,9 @@ login.onclick=function(){
             console.log("user logged-in");
             alert("Logged-in Successfully!");
             
+            var span = document.getElementById('user_name');
+                 span.innerHTML= username.toString() ;
+                 
              }
              else if(request.status === 403){
                  alert("username / password is invalid ");
