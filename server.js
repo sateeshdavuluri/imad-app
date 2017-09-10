@@ -170,14 +170,14 @@ app.get('/test-db', function(req,res){
 
 
 var events= { 
-    'wedding1':{
+    'wedding':{
                 title :   'wedding.... | satD',
                 heading:  'Types',
                 content:` <p>There are many ways to count::</p>
                           <p>tarditional, registered, by StayToGether</p> `
         
               },
-    'caterer1':{
+    'caterer':{
                 title :  'caterer | satD',
                 heading: 'Menu',
                 content:`<p>You wish we serve</p>
