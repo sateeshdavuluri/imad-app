@@ -197,7 +197,7 @@ register.onclick=function(){
 var wed = document.getElementById('wed');
 
 wed.onclick =function(){
-    var userRight = 1;
+    var userRight = 
 };
 
 
