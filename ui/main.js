@@ -193,19 +193,12 @@ register.onclick=function(){
 };  
   
 
-// var wed = document.getElementById('wed');
 
+var wed = document.getElementById('wed');
 
-
-
-
-
-
-
-
-
-
-
+wed.onclick =function(){
+    var userRight = 1;
+};
 
 
 
