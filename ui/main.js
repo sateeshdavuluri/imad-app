@@ -193,6 +193,7 @@ register.onclick=function(){
 };  
   
 
+// var wed = document.getElementById('wed');
 
 
 
