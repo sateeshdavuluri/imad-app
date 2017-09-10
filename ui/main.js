@@ -165,7 +165,7 @@ register.onclick=function(){
                 console.log("user Registered");
                 alert("user Registered Successfully!"); } 
              
-             else if(request.status === 500){
+             else(request.status === 500){
                      alert("Something is wrong on the Server"); }
              
        }
@@ -197,7 +197,20 @@ register.onclick=function(){
 var wed = document.getElementById('wed');
 
 wed.onclick =function(){
-    var userRight = 
+    var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function(){
+        if(request.readystate === XMLHttRequest.Done){
+            if(request.status === 200){
+                // continue to next page
+            } else {
+                alert("Please Login firs!");
+            }
+        }
+    };
+      
+    request.open('GET','http://sateeshdavuluri.imad.hasura-app.io/chech-login', true);
+    request.send(null);
 };
 
 
