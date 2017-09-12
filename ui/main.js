@@ -203,7 +203,7 @@ wed.onclick =function(){
         if(request.readystate === XMLHttRequest.Done){
             if(request.status === 200){
                 // continue to next page
-                wed.setAttribute("href", "/events/wedding");
+                wed.setAttribute('href', '/events/wedding');
             } else if(request.status === 500){
                 alert("Something wrong n the server!");}
              else {
