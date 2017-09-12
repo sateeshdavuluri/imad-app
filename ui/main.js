@@ -206,7 +206,7 @@ wed.onclick=function(){
             if(request.status === 200){
                 // continue to next page
                 var wed = document.getElementById('wed');
-                wed.setAttribute("href", "http://sateeshdavuluri.imad.hasura-app.io/events/wedding");
+                wed.href ="http://sateeshdavuluri.imad.hasura-app.io/events/wedding";
                 
             } else if(request.status === 500){
                 alert("Something wrong in the server!");
