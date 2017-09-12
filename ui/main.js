@@ -119,7 +119,7 @@ login.onclick=function(){
              }else if(request.status === 403){
                  alert("username / password is invalid ");
                  console.log("username / password is invalid ");
-             }else(request.status === 500){
+             }else if(request.status === 500){
                  alert("Something is wrong on the Server");
              }
          
