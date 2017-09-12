@@ -213,7 +213,7 @@ wed.onclick =function(){
         }
     };
       
-    request.open('GET','http://sateeshdavuluri.imad.hasura-app.io/chech-login', true);
+    request.open('GET','http://sateeshdavuluri.imad.hasura-app.io/check-login', true);
     request.send(null);
 };
 
