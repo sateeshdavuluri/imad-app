@@ -165,7 +165,7 @@ register.onclick=function(){
                 console.log("user Registered");
                 alert("user Registered Successfully!"); } 
              
-             else(request.status === 500){
+             else if(request.status === 500){
                      alert("Something is wrong on the Server"); }
              
        }
