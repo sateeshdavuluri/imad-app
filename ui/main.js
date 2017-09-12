@@ -200,7 +200,7 @@ wed.onclick =function(){
     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function(){
-        if(request.readystate === XMLHttRequest.Done){
+        if(request.readystate === XMLHttpRequest.Done){
             if(request.status === 200){
                 // continue to next page
                 wed.setAttribute('href', '/events/wedding');
