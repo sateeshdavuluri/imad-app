@@ -108,7 +108,7 @@ login.onclick=function(){
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
        
-       if(request.readystate === XMLHttpRequest.DONE){
+       if(request.readystate === XMLHttpRequest.Done){
          if(request.status === 200){
             console.log("user logged-in");
             alert("Logged-in Successfully!");
@@ -200,11 +200,13 @@ wed.onclick =function(){
     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function(){
+        
         if(request.readystate === XMLHttpRequest.Done){
+            
             if(request.status === 200){
                 // continue to next page
                 var wed = document.getElementById('wed');
-                wed.href="/events/wedding";
+                wed.href="http://sateeshdavuluri.imad.hasura-app.io/events/wedding";
                 
             } else if(request.status === 500){
                 alert("Something wrong n the server!");
