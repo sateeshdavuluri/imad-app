@@ -250,7 +250,7 @@ app.get('/events/:eventsName',function(req,res){
      // in sql query " - " appers in title then add single quotes to variable
      // sql injection  ';DELETE from "events" where 'a' = 'a 
      //to protect from sql injection pg librarysuggess to add "$1" for ' ' variable in array 
-  /*   pool.query("SELECT * FROM events where title = $1",[req.params.eventsName],function(err,result){
+      pool.query("SELECT * FROM events where title = $1",[req.params.eventsName],function(err,result){
          if(err){
              res.status(500).send(err.toString());
          } else {
@@ -262,8 +262,8 @@ app.get('/events/:eventsName',function(req,res){
              }
          }
      });
-     */
-     res.send(createTemplate(events[eventsName] ));
+     
+    //  res.send(createTemplate(events[eventsName] ));
 });
 
 app.get('/ui/main.js', function (req, res) {
