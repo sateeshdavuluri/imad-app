@@ -117,10 +117,8 @@ app.post('/login',function(req,res){      //app.post to insert into request
                      req.session.auth = {userId: result.rows[0].id};
                      
                       res.send("Credentials are Correct");
-                  
-                      
-                  }
-                  else {
+ 
+                  } else {
                         res.status(403).send("username/password is invalid");
                        }
                }
