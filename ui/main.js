@@ -206,9 +206,10 @@ wed.onclick =function(){
                 wed.setAttribute('href', '/events/wedding');
                 
             } else if(request.status === 500){
-                alert("Something wrong n the server!");}
-             else {
-                alert("Please Login firs!");
+                alert("Something wrong n the server!");
+                
+            }else{
+                alert("Please Login first!");
             }
         }
     };
