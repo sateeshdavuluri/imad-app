@@ -116,10 +116,10 @@ login.onclick=function(){
             var span = document.getElementById('user_name');
                  span.innerHTML= username.toString() ;
                  
-             }else if(request.status === 403){
+             } else if(request.status === 403) {
                  alert("username / password is invalid ");
                  console.log("username / password is invalid ");
-             }else if(request.status === 500){
+             } else if(request.status === 500) {
                  alert("Something is wrong on the Server");
              }
          
