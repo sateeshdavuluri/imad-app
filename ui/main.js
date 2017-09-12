@@ -206,7 +206,7 @@ wed.onclick=function(){
             if(request.status === 200){
                 // continue to next page
                 var wed = document.getElementById('wed');
-                wed.href ="http://sateeshdavuluri.imad.hasura-app.io/events/wedding";
+                wed.href ='http://sateeshdavuluri.imad.hasura-app.io/events/wedding';
                 
             } else if(request.status === 500){
                 alert("Something wrong in the server!");
@@ -218,7 +218,7 @@ wed.onclick=function(){
     };
       
     request.open('GET','http://sateeshdavuluri.imad.hasura-app.io/check-login', true);
-    request.send(null);
+  //  request.send(null);
 };
 
 
