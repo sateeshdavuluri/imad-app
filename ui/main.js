@@ -209,10 +209,10 @@ wed.onclick=function(){
                 wed.setAttribute("href", "http://sateeshdavuluri.imad.hasura-app.io/events/wedding");
                 
             } else if(request.status === 500){
-                alert("Something wrong n the server!");
+                alert("Something wrong in the server!");
                 
             }else{
-               // alert("Please Login first!");
+                alert("Please Login first!");
             }
         }
     };
