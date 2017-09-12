@@ -201,7 +201,7 @@ wed.onclick=function(){
     
     request.onreadystatechange = function(){
         
-        if(request.readystate === XMLHttpRequest.Done){
+        if(request.readystate === XMLHttpRequest.DONE){
             
             if(request.status === 200){
                 // continue to next page
@@ -212,7 +212,7 @@ wed.onclick=function(){
                 alert("Something wrong n the server!");
                 
             }else{
-                alert("Please Login first!");
+               // alert("Please Login first!");
             }
         }
     };
@@ -220,6 +220,7 @@ wed.onclick=function(){
     request.open('GET','http://sateeshdavuluri.imad.hasura-app.io/check-login', true);
     request.send(null);
 };
+
 
 
 
