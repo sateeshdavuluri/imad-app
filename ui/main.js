@@ -68,12 +68,12 @@ submit.onclick = function(){
             // 10 recent comment to show
             if(names.length<=10){
                 for(var i=names.length;i>0;i--){
-                    list += '<li>' + names[i-1] +" "+'</li>';
+                    list += '<li>' + names[i-1] +'</li>';
                 }
                 
             } else {
                 for(var j=0,i=names.length;j<10;i--,j++){
-                    list += '<li>' + names[i-1] +" "+'</li>';
+                    list += '<li>' + names[i-1] +'</li>';
                 }
             }
            
