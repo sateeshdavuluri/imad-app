@@ -131,8 +131,7 @@ login.onclick=function(){
 
     login.style.visibility = 'hidden';
     logout.style.visibility = 'visible';
-    username.value = "";
-    password.value = "";
+    
         
     //make req 
   var username = document.getElementById('username').value;
@@ -146,7 +145,8 @@ login.onclick=function(){
   request.setRequestHeader('Content-Type','application/json');
   request.send(JSON.stringify({username: username, password: password}));
 
-  
+  username.value = "";
+  password.value = "";
 };  
 
 
