@@ -116,8 +116,9 @@ login.onclick=function(){
          if(request.status === 200){
             console.log("user logged-in");
             alert("Logged-in Successfully!");
-            username.value = " ";
-            password.value = " ";
+            
+            username.clearField();
+            password.clearField();
             
             var span = document.getElementById('user_name');
                  span.innerHTML= username.toString() ;
