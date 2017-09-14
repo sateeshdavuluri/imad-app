@@ -123,12 +123,12 @@ login.onclick=function(){
              } else if(request.status === 500) {
                  alert("Something is wrong on the Server");
              }
-         
-         
-            
+    
         }
       };
 
+    username.value = "";
+    password.value = "";
     login.style.visibility = 'hidden';
     logout.style.visibility = 'visible';
     
@@ -145,8 +145,6 @@ login.onclick=function(){
   request.setRequestHeader('Content-Type','application/json');
   request.send(JSON.stringify({username: username, password: password}));
 
-  username.value = "";
-  password.value = "";
 };  
 
 
