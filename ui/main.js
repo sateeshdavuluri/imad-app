@@ -99,7 +99,7 @@ submit.onclick = function(){
 // Login username pswrd
 var login = document.getElementById('login_btn');
 var logout = document.getElementById('logout_btn');
-var hidden = false;
+//var hidden = false;
    
 login.onclick=function(){
     //make req to server and send name
