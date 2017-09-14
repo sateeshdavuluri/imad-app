@@ -130,6 +130,8 @@ login.onclick=function(){
     
     login.style.visibility = 'hidden';
     logout.style.visibility = 'visible';
+    username = "";
+    password = "";
     
         
     //make req 
@@ -145,8 +147,7 @@ login.onclick=function(){
   request.send(JSON.stringify({username: username, password: password}));
 
 };  
-username.value = "";
-password.value = "";
+
 
 
 
@@ -161,7 +162,7 @@ logout.onclick = function(){
    request.onreadystatechange= function(){
        
        if(request.readystate === XMLHttpRequest.DONE){
-         if(request.status === 200){
+         if(request.status === 200||request.status === 304){
             console.log("user logged-out");
             alert("Logged-out Successfully!");
             
