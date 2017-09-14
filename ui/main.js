@@ -130,7 +130,7 @@ login.onclick=function(){
       };
 
     login.style.visibility = 'hidden';
-    logout.style.visibility = 'viible';
+    logout.style.visibility = 'visible';
 
     //make req 
   var username = document.getElementById('username').value;
