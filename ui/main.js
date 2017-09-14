@@ -107,8 +107,8 @@ login.onclick=function(){
    var request = new XMLHttpRequest();
    
    login.style.visibility = 'hidden';
-    logout.style.visibility = 'visible';
-
+   logout.style.visibility = 'visible';
+   
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
        
@@ -131,10 +131,6 @@ login.onclick=function(){
       };
 
     
-    username.value = null;
-    password.value = null;
-    
-        
     //make req 
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
@@ -146,6 +142,9 @@ login.onclick=function(){
   request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/login", true);
   request.setRequestHeader('Content-Type','application/json');
   request.send(JSON.stringify({username: username, password: password}));
+
+username.value ="";
+password.value ="";
 
 };  
 
