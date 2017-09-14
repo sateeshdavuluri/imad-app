@@ -105,6 +105,9 @@ login.onclick=function(){
      //create req counter
    
    var request = new XMLHttpRequest();
+   
+   login.style.visibility = 'hidden';
+    logout.style.visibility = 'visible';
 
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
@@ -113,9 +116,6 @@ login.onclick=function(){
          if(request.status === 200){
             console.log("user logged-in");
             alert("Logged-in Successfully!");
-            
-            login.style.visibility = 'hidden';
-            logout.style.visibility = 'visible';
             
             var span = document.getElementById('user_name');
                  span.innerHTML= username.toString() ;
@@ -131,8 +131,8 @@ login.onclick=function(){
       };
 
     
-    username = "";
-    password = "";
+    username.value = null;
+    password.value = null;
     
         
     //make req 
