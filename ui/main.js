@@ -112,10 +112,12 @@ login.onclick=function(){
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
        
-       if(request.readystate === XMLHttpRequest.DONE){
+       if(request.readystate === XMLHttpRequest.Done){
          if(request.status === 200){
             console.log("user logged-in");
             alert("Logged-in Successfully!");
+            username.value = " ";
+            password.value = " ";
             
             var span = document.getElementById('user_name');
                  span.innerHTML= username.toString() ;
@@ -143,8 +145,7 @@ login.onclick=function(){
   request.setRequestHeader('Content-Type','application/json');
   request.send(JSON.stringify({username: username, password: password}));
 
-username = " ";
-password.value = " ";
+
 
 };  
 
@@ -161,7 +162,7 @@ logout.onclick = function(){
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
        
-       if(request.readystate === XMLHttpRequest.DONE){
+       if(request.readystate === XMLHttpRequest.Done){
          if(request.status === 200||request.status === 304){
             console.log("user logged-out");
             alert("Logged-out Successfully!");
