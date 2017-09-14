@@ -173,7 +173,7 @@ logout.onclick = function(){
       };
      
     //make req 
- request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/logout", true);
+ request.open("GET","http://sateeshdavuluri.imad.hasura-app.io/logout", true);
  
   request.send(null);
 
