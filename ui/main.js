@@ -127,8 +127,7 @@ login.onclick=function(){
         }
       };
 
-    username.value = "";
-    password.value = "";
+    
     login.style.visibility = 'hidden';
     logout.style.visibility = 'visible';
     
@@ -146,6 +145,9 @@ login.onclick=function(){
   request.send(JSON.stringify({username: username, password: password}));
 
 };  
+username.value = "";
+password.value = "";
+
 
 
 // logout
