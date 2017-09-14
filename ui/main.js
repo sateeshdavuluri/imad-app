@@ -131,7 +131,8 @@ login.onclick=function(){
 
     login.style.visibility = 'hidden';
     logout.style.visibility = 'visible';
-    
+    username.value = "";
+    password.value = "";
         
     //make req 
   var username = document.getElementById('username').value;
