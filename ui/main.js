@@ -117,8 +117,7 @@ login.onclick=function(){
             console.log("user logged-in");
             alert("Logged-in Successfully!");
             
-            username.clearField();
-            password.clearField();
+            
             
             var span = document.getElementById('user_name');
                  span.innerHTML= username.toString() ;
@@ -149,7 +148,8 @@ login.onclick=function(){
 
 
 };  
-
+username.onclick=clearField();
+            passwordonclick=clearField();
 
 
 
