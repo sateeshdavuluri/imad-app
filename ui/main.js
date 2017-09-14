@@ -99,8 +99,7 @@ submit.onclick = function(){
 // Login username pswrd
 var login = document.getElementById('login_btn');
 var logout = document.getElementById('logout_btn');
-var hidden = false;
-   
+
 login.onclick=function(){
     //make req to server and send name
      //create req counter
@@ -141,14 +140,46 @@ login.onclick=function(){
   //  console.log(username);  //for test/debugging only
   //  console.log(password);  //for test/debugging
     
-  request.open("GET","http://sateeshdavuluri.imad.hasura-app.io/check-login", true);
-  if(request.status  )
+ 
   request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/login", true);
   request.setRequestHeader('Content-Type','application/json');
   request.send(JSON.stringify({username: username, password: password}));
 
   
 };  
+
+
+// logout
+var login = document.getElementById('login_btn');
+var logout = document.getElementById('logout_btn');
+
+logout.onclick = function(){
+    var request = new XMLHttpRequest();
+
+   //complete the response and store it in a varible
+   request.onreadystatechange= function(){
+       
+       if(request.readystate === XMLHttpRequest.DONE){
+         if(request.status === 200){
+            console.log("user logged-out");
+            alert("Logged-out Successfully!");
+            login.style.visibility = 'visible';
+            logout.style.visibility = 'hidden';
+           
+           } else if(request.status === 500) {
+                 alert("Something is wrong on the Server");
+           }
+        }
+      };
+     
+    //make req 
+ request.open("POST","http://sateeshdavuluri.imad.hasura-app.io/logout", true);
+ 
+  request.send(null);
+
+};
+    
+
 
 
   
@@ -199,32 +230,8 @@ register.onclick=function(){
   
 
 
-var wed = document.getElementById('wed');
 
-wed.onclick=function(){
-    var request = new XMLHttpRequest();
-    
-    request.onreadystatechange = function(){
-        
-        if(request.readystate === XMLHttpRequest.DONE){
-            
-            if(request.status === 200){
-                // continue to next page
-                var wed = document.getElementById('wed');
-                wed.href ='http://sateeshdavuluri.imad.hasura-app.io/events/wedding';
-                
-            } else if(request.status === 500){
-                alert("Something wrong in the server!");
-                
-            }else{
-                alert("Please Login first!");
-            }
-        }
-    };
-      
-    request.open('GET','http://sateeshdavuluri.imad.hasura-app.io/check-login', true);
-  //  request.send(null);
-};
+
 
 
 
