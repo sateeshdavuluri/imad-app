@@ -114,6 +114,9 @@ login.onclick=function(){
             console.log("user logged-in");
             alert("Logged-in Successfully!");
             
+            login.style.visibility = 'hidden';
+            logout.style.visibility = 'visible';
+            
             var span = document.getElementById('user_name');
                  span.innerHTML= username.toString() ;
                  
@@ -128,8 +131,6 @@ login.onclick=function(){
       };
 
     
-    login.style.visibility = 'hidden';
-    logout.style.visibility = 'visible';
     username = "";
     password = "";
     
