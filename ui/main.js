@@ -163,15 +163,15 @@ logout.onclick = function(){
          if(request.status === 200){
             console.log("user logged-out");
             alert("Logged-out Successfully!");
-            login.style.visibility = 'visible';
-            logout.style.visibility = 'hidden';
-           
+            
            } else if(request.status === 500) {
                  alert("Something is wrong on the Server");
            }
         }
       };
      
+     login.style.visibility = 'visible';
+     logout.style.visibility = 'hidden';
     //make req 
  request.open("GET","http://sateeshdavuluri.imad.hasura-app.io/logout", true);
  
