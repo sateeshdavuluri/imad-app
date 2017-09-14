@@ -130,12 +130,9 @@ login.onclick=function(){
         }
       };
 
-    hidden = !hidden;
-        if(hidden) {
-            logout.style.visibility = 'hidden';
-        } else {
-            logout.style.visibility = 'visible';
-        }
+    login.style.visibility = 'hidden';
+    logout.style.visibility = 'visible';
+    
         
     //make req 
   var username = document.getElementById('username').value;
