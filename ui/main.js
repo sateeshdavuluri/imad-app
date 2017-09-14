@@ -146,10 +146,10 @@ login.onclick=function(){
   request.send(JSON.stringify({username: username, password: password}));
 
 
-
+document.getElementById('username').reset();
+document.getElementById('password').reset();
 };  
-username.onclick=clearField();
-            passwordonclick=clearField();
+
 
 
 
