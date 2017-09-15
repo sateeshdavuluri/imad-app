@@ -119,6 +119,7 @@ login.onclick=function(){
                  
                 login.style.visibility = 'hidden';
                 logout.style.visibility = 'visible';
+                
                 document.getElementById('username').value ="";
                 document.getElementById('password').value ="";
                  
@@ -155,8 +156,8 @@ password.text = "";
 
 
 // logout
-var login = document.getElementById('login_btn');
-var logout = document.getElementById('logout_btn');
+//var login = document.getElementById('login_btn');
+//var logout = document.getElementById('logout_btn');
 
 logout.onclick = function(){
     var request = new XMLHttpRequest();
