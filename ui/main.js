@@ -112,13 +112,10 @@ login.onclick=function(){
        
        if(request.readystate === XMLHttpRequest.Done){
          if(request.status === 200){
-            console.log("user logged-in");
-            alert("Logged-in Successfully!");
-            
-            
-            
-            var span = document.getElementById('user_name');
-                 span.innerHTML= username.toString() ;
+                console.log("user logged-in");
+                alert("Logged-in Successfully!");
+                var span = document.getElementById('user_name');
+                    span.innerHTML= username.toString() ;
                  
                 login.style.visibility = 'hidden';
                 logout.style.visibility = 'visible';
@@ -165,8 +162,11 @@ logout.onclick = function(){
        
        if(request.readystate === XMLHttpRequest.Done){
          if(request.status === 200||request.status === 304){
-            console.log("user logged-out");
-            alert("Logged-out Successfully!");
+                console.log("user logged-out");
+                alert("Logged-out Successfully!");
+                
+                login.style.visibility = 'visible';
+                logout.style.visibility = 'hidden';
             
            } else if(request.status === 500) {
                  alert("Something is wrong on the Server");
@@ -174,8 +174,7 @@ logout.onclick = function(){
         }
       };
      
-     login.style.visibility = 'visible';
-     logout.style.visibility = 'hidden';
+     
     //make req 
  request.open("GET","http://sateeshdavuluri.imad.hasura-app.io/logout", true);
  
