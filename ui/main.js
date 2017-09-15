@@ -99,6 +99,7 @@ submit.onclick = function(){
 // Login username pswrd
 var login = document.getElementById('login_btn');
 var logout = document.getElementById('logout_btn');
+var login = document.getElementById('loginnext');
 
 login.onclick=function(){
     //make req to server and send name
@@ -117,8 +118,9 @@ login.onclick=function(){
                 var span = document.getElementById('user_name');
                     span.innerHTML= username.toString() ;
                  
-                login.style.visibility = 'hidden';
-                register.style.visibility = 'hidden';
+                loginnext.style.visibility = 'hidden';
+               // register.style.visibility = 'hidden';
+               
                 logout.style.visibility = 'visible';
                 
                 document.getElementById('username').value ="";
@@ -171,7 +173,7 @@ logout.onclick = function(){
                 console.log("user logged-out");
                 alert("Logged-out Successfully!");
                 
-                login.style.visibility = 'visible';
+                loginnext.style.visibility = 'visible';
                 register.style.visibility = 'visible';
                 logout.style.visibility = 'hidden';
             
