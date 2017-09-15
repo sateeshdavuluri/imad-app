@@ -106,8 +106,6 @@ login.onclick=function(){
    
    var request = new XMLHttpRequest();
    
-   login.style.visibility = 'hidden';
-   logout.style.visibility = 'visible';
    
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
@@ -131,8 +129,9 @@ login.onclick=function(){
     
         }
       };
-        username ="";
-        password ="";
+        
+   login.style.visibility = 'hidden';
+   logout.style.visibility = 'visible';
     
     //make req 
   var username = document.getElementById('username').value;
