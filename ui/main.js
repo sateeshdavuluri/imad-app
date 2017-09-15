@@ -172,6 +172,7 @@ logout.onclick = function(){
                 alert("Logged-out Successfully!");
                 
                 login.style.visibility = 'visible';
+                register.style.visibility = 'visible';
                 logout.style.visibility = 'hidden';
             
            } else if(request.status === 500) {
