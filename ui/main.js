@@ -30,7 +30,7 @@ touch.onclick=function(){
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
        
-       if(request.readystate === XMLHttpRequest.Done){
+       if(request.readystate === XMLHttpRequest.DONE){
          if(request.status === 200){
              var counter = request.responseText;
              var span = document.getElementById('count');
@@ -57,7 +57,7 @@ submit.onclick = function(){
    //complete the response and store it in a varible
    request.onreadystatechange = function(){
        
-       if(request.readystate === XMLHttpRequest.Done){
+       if(request.readystate === XMLHttpRequest.DONE){
          if(request.status === 200){
             
             // capture and render the names as a list
@@ -112,7 +112,7 @@ login.onclick=function(){
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
        
-       if(request.readystate === XMLHttpRequest.Done){
+       if(request.readystate === XMLHttpRequest.DONE){
          if(request.status === 200){
             console.log("user logged-in");
             alert("Logged-in Successfully!");
@@ -161,7 +161,7 @@ logout.onclick = function(){
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
        
-       if(request.readystate === XMLHttpRequest.Done){
+       if(request.readystate === XMLHttpRequest.DONE){
          if(request.status === 200||request.status === 304){
             console.log("user logged-out");
             alert("Logged-out Successfully!");
@@ -197,7 +197,7 @@ register.onclick=function(){
    //complete the response and store it in a varible
    request.onreadystatechange= function(){
        
-       if(request.readystate === XMLHttpRequest.Done){
+       if(request.readystate === XMLHttpRequest.DONE){
              
              if(request.status === 200){
                 console.log("user Registered");
