@@ -88,7 +88,11 @@ submit.onclick = function(){
    //make req 
   var nameInput = document.getElementById('name');
   var name = nameInput.value;
-  if(name !== ""){
+  if(name === ""){
+      alert("Please write Something First...");
+  }else if(name.ength > 140){
+      alert("Please write below 140 characters only..");
+  }else{
       request.open('GET','http://sateeshdavuluri.imad.hasura-app.io/submit-name?name='+ name,true);
       request.send(null);
    }
