@@ -118,6 +118,7 @@ login.onclick=function(){
                     span.innerHTML= username.toString() ;
                  
                 login.style.visibility = 'hidden';
+                register.style.visibility = 'hidden';
                 logout.style.visibility = 'visible';
                 
                 document.getElementById('username').value ="";
