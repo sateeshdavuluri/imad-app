@@ -131,8 +131,8 @@ login.onclick=function(){
     
         }
       };
-        username.value = " ";
-        password.value="";
+        username ="";
+        password ="";
     
     //make req 
   var username = document.getElementById('username').value;
