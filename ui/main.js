@@ -122,6 +122,7 @@ login.onclick=function(){
                // register.style.visibility = 'hidden';
                
                 logout.style.visibility = 'visible';
+                foo.style.visibility = 'visible';
                 
                 document.getElementById('username').value ="";
                 document.getElementById('password').value ="";
