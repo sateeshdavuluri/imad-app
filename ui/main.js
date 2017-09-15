@@ -120,6 +120,9 @@ login.onclick=function(){
             var span = document.getElementById('user_name');
                  span.innerHTML= username.toString() ;
                  
+                login.style.visibility = 'hidden';
+                logout.style.visibility = 'visible';
+                 
              } else if(request.status === 403) {
                  alert("username / password is invalid ");
                  console.log("username / password is invalid ");
@@ -130,8 +133,7 @@ login.onclick=function(){
         }
       };
         
-   login.style.visibility = 'hidden';
-   logout.style.visibility = 'visible';
+   
     
     //make req 
   var username = document.getElementById('username').value;
