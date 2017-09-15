@@ -113,12 +113,14 @@ login.onclick=function(){
        if(request.readystate === XMLHttpRequest.Done){
          if(request.status === 200){
                 console.log("user logged-in");
-                alert("Logged-in Successfully!");
+                alert("Logged-in Successfully!"+username);
                 var span = document.getElementById('user_name');
                     span.innerHTML= username.toString() ;
                  
                 login.style.visibility = 'hidden';
                 logout.style.visibility = 'visible';
+                
+               
                  
              } else if(request.status === 403) {
                  alert("username / password is invalid ");
