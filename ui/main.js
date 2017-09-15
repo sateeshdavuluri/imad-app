@@ -119,9 +119,8 @@ login.onclick=function(){
                  
                 login.style.visibility = 'hidden';
                 logout.style.visibility = 'visible';
-                
-                username.text = "";
-                password.text = "";
+                document.getElementById('username').value ="";
+                document.getElementById('password').value ="";
                  
              } else if(request.status === 403) {
                  alert("username / password is invalid ");
@@ -147,6 +146,8 @@ login.onclick=function(){
   request.setRequestHeader('Content-Type','application/json');
   request.send(JSON.stringify({username: username, password: password}));
 
+username.text = "";
+password.text = "";
 
 };  
 
