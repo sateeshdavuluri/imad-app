@@ -29,6 +29,6 @@ body {
     padding-left: 20px;
     padding-right: 20px;
 }
-.input :active{
+.input submit:active{
     margin-top : 5px;
 }
