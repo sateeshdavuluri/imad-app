@@ -19,6 +19,10 @@ img.onclick = function() {
     //to move img its CSS been modified
 };
 */
+
+var today = new Date();
+  document.getElementById('time').innerHTML = today;
+
 // counter code
 var touch = document.getElementById('touch-button');
 
