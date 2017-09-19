@@ -257,10 +257,10 @@ var menutype = document.getElementById("menu");
 var mitems = document.getElementById("menu_items");
 menutype.onclick= function(){
    
- if(menutype.slectedIndex == 1){
-        mitems.stle.isplay= 'block';
-    }else if(menutype.slectedIndex == 2){
-       mitems.style.display =  'block';
+ if(menutype.slectedIndex == 0){
+        mitems.style.visibiity= 'visible';
+    }else if(menutype.slectedIndex == 1){
+       mitems.style.visibility =  'visible';
     }
 };
 
