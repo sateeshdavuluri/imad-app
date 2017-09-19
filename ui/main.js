@@ -254,13 +254,15 @@ register.onclick=function(){
 
 // form 
 var menutype = document.getElementById("menu");
-var mitems = document.getElementById("menu_items");
+var msitems = document.getElementById("menu_south");
+var mnitems = document.getElementById("menu_north");
+
 menutype.onchange= function(){
    
  if(menutype.slectedIndex == 0){
-        mitems.style.visibiity= 'visible';
+        msitems.style.visibiity= 'visible';
     }else if(menutype.slectedIndex == 1){
-       mitems.style.visibility =  'visible';
+       mnitems.style.visibility =  'visible';
     }
 };
 
