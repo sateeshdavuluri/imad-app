@@ -255,7 +255,7 @@ register.onclick=function(){
 // form 
 var menutype = document.getElementById("menu");
 var mitems = document.getElementById("menu_items");
-menutype.onclick= function(){
+menutype.onchange= function(){
    
  if(menutype.slectedIndex == 0){
         mitems.style.visibiity= 'visible';
