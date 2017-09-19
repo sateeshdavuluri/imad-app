@@ -255,7 +255,7 @@ register.onclick=function(){
 // form 
 var menutype = document.getElementById("menu");
 var mitems = document.getElementById("menu_items");
-menutype.onclick()= function(){
+menutype.onclick= function(){
     if(menutype == 1){
         mitems.innerHTML = '<input type="checkbox" id ="sweet" value= "sweet">Sweet <br>                    <input type="checkbox" id="rice" value ="rice">Rice <br><input type="checkbox" id="rice" value ="dal">Daal <br><input type="checkbox" id="rice" value ="curry">Cury <br><input type="checkbox" id="rice" value ="sambar">Sambar <br> <input type="checkbox" id="rice" value ="dahi">Dahi '
     }else if(menutype == 2){
