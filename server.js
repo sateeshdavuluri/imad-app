@@ -26,6 +26,16 @@ app.use(session({
 }));
 
 
+//menu  change
+
+app.get('/menutype',function(req,res){
+    
+    
+    
+});
+
+
+// counter enoint
 var counter =0;
 app.get('/counter', function(req,res){
   counter = counter + 1;
