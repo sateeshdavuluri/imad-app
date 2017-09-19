@@ -265,6 +265,9 @@ menutype.onchange= function(){
     }else if(menutype.selectedIndex == 2){
         mnitems.style.visibility =  'visible';
         msitems.style.visibility = 'hidden';
+    }else {
+        mnitems.style.visibility =  'hidden';
+        msitems.style.visibility = 'hidden';
     }
 };
 
