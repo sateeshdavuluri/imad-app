@@ -259,9 +259,9 @@ var mnitems = document.getElementById("menu_north");
 
 menutype.onchange= function(){
    
- if(menutype.selectedIndex == 0){
+ if(menutype.selectedIndex == 1){
         msitems.style.visibiity= 'visible';
-    }else if(menutype.selectedIndex == 1){
+    }else if(menutype.selectedIndex == 2){
        mnitems.style.visibility =  'visible';
     }
 };
