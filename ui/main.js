@@ -255,14 +255,14 @@ register.onclick=function(){
 // form 
 var menutype = document.getElementById("menu");
 var mitems = document.getElementById("menu_items");
-menutype.options.onclick= function(){
+//menutype.options.onclick= function(){
    
  if(menutype.slectedIndex == 1){
         mitems.innerHTML = '<input type="checkbox" id ="sweet" value= "sweet">Sweet <br>                    <input type="checkbox" id="rice" value ="rice">Rice <br><input type="checkbox" id="rice" value ="dal">Daal <br><input type="checkbox" id="rice" value ="curry">Cury <br><input type="checkbox" id="rice" value ="sambar">Sambar <br> <input type="checkbox" id="rice" value ="dahi">Dahi ';
     }else if(menutype.slectedIndex == 2){
        mitems.innerHTML =  '<input type="checkbox" id ="sweet" value= "sweet">Sweet <br> <input type="checkbox" id="rice" value ="roti">Roti<br> <input type="checkbox" id="rice" value ="daal">daal <br> <input type="checkbox" id="rice" value ="curry">Cury <br> <input type="checkbox" id="rice" value ="gravy">Gravy <br> <input type="checkbox" id="rice" value ="Lussy">Lussy ';
     }
-};
+//};
 
 
 
