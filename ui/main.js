@@ -253,8 +253,9 @@ register.onclick=function(){
   
 
 // form 
+var menutype = document.getElementByID("menu");
 
-
+if(menutype == )
 
 
 
