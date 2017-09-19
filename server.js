@@ -26,13 +26,17 @@ app.use(session({
 }));
 
 
-//menu  change
+/*  menu  change
 
 app.get('/menutype',function(req,res){
+     if(menutype == 1){
+        mitems.innerHTML = '<input type="checkbox" id ="sweet" value= "sweet">Sweet <br>                    <input type="checkbox" id="rice" value ="rice">Rice <br><input type="checkbox" id="rice" value ="dal">Daal <br><input type="checkbox" id="rice" value ="curry">Cury <br><input type="checkbox" id="rice" value ="sambar">Sambar <br> <input type="checkbox" id="rice" value ="dahi">Dahi ';
+    }else if(menutype == 2){
+       mitems.innerHTML =  '<input type="checkbox" id ="sweet" value= "sweet">Sweet <br> <input type="checkbox" id="rice" value ="roti">Roti<br> <input type="checkbox" id="rice" value ="daal">daal <br> <input type="checkbox" id="rice" value ="curry">Cury <br> <input type="checkbox" id="rice" value ="gravy">Gravy <br> <input type="checkbox" id="rice" value ="Lussy">Lussy ';
+    }
     
     
-    
-});
+});*/
 
 
 // counter enoint
