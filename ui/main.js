@@ -260,9 +260,9 @@ var mnitems = document.getElementById("menu_north");
 menutype.onchange= function(){
    
  if(menutype.selectedIndex == 1){
-        msitems.style.visibiity= 'visible';
+        msitems.style.visibility = 'visible';
     }else if(menutype.selectedIndex == 2){
-       mnitems.style.visibility =  'visible';
+        mnitems.style.visibility =  'visible';
     }
 };
 
