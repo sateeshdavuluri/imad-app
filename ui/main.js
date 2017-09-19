@@ -183,8 +183,10 @@ logout.onclick = function(){
                 alert("Logged-out Successfully!");
                 
                 loginnext.style.visibility = 'visible';
-                register.style.visibility = 'visible';
+               // register.style.visibility = 'visible';
+                
                 logout.style.visibility = 'hidden';
+                foo.style.visibility = 'hidden';
             
            } else if(request.status === 500) {
                  alert("Something is wrong on the Server");
@@ -250,6 +252,7 @@ register.onclick=function(){
 };  
   
 
+// form 
 
 
 
