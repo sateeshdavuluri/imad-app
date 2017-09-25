@@ -143,7 +143,8 @@ login.onclick=function(){
              } else if(request.status === 500) {
                  alert("Something is wrong on the Server");
              }
-    
+             
+             document.getElemenById("userform").visibility = "visible";
         }
       };
         
@@ -227,8 +228,7 @@ register.onclick=function(){
              else if(request.status === 500){
                      alert("Something is wrong on the Server"); }
             
-            document.getElementBId('userform').visibility = "visible";
-       }
+         }
        
       };
 
