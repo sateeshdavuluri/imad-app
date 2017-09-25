@@ -20,7 +20,7 @@ img.onclick = function() {
 };
 */
 
-var today = new Date();
+var today = new Date().toString();
   document.getElementById('time').innerHTML = today;
 
 // counter code
