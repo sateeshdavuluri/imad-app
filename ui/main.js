@@ -144,7 +144,7 @@ login.onclick=function(){
                  alert("Something is wrong on the Server");
              }
              
-             document.getElemenById("userform").visibility = "visible";
+             document.getElementById("userform").visibility = "visible";
         }
       };
         
