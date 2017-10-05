@@ -31,9 +31,7 @@ body {
     margin: 0 auto;
     
     font-family: "Comic Sans MS";
-    color : Green;
+    color : #99ff33;
     padding-left: 20px;
     padding-right: 20px;
-    
-    opacity : 1;
 }
