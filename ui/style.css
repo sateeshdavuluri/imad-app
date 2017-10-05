@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     
-    background :  light gray url("https://lh4.googleusercontent.com/-Xx5-QCGGI80/TXIokSzs1AI/AAAAAAAAB0E/HeElexC5KF8/s320/south_indian_meal.jpg") no-repeat fixed center center;
+    background :  lightgray url("https://lh4.googleusercontent.com/-Xx5-QCGGI80/TXIokSzs1AI/AAAAAAAAB0E/HeElexC5KF8/s320/south_indian_meal.jpg") no-repeat fixed center center;
  
     background-size: cover;
     margin-top: 50px;
@@ -30,7 +30,7 @@ body {
     margin: 0 auto;
     
     font-family: "Comic Sans MS";
-    color : Tomato, #ffd9b3;
+    color : Tomato;
     padding-left: 20px;
     padding-right: 20px;
 }
