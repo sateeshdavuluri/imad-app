@@ -136,6 +136,7 @@ login.onclick=function(){
                 
                 document.getElementById('username').value ="";
                 document.getElementById('password').value ="";
+                document.getElementById('userform').style.visibility = "visible";
                  
              } else if(request.status === 403) {
                  alert("username / password is invalid ");
@@ -144,7 +145,7 @@ login.onclick=function(){
                  alert("Something is wrong on the Server");
              }
              
-             document.getElementById('userform').style.visibility = "visible";
+             
         }
       };
         
@@ -188,7 +189,7 @@ logout.onclick = function(){
                 
                 logout.style.visibility = 'hidden';
                 foo.style.visibility = 'hidden';
-            
+                document.getElementById('userform').style.visibility = "hidden";
            } else if(request.status === 500) {
                  alert("Something is wrong on the Server");
            }
