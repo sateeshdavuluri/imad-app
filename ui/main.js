@@ -128,15 +128,16 @@ login.onclick=function(){
                 var span = document.getElementById('user_name');
                     span.innerHTML= username.toString() ;
                  
-                loginnext.style.visibility = 'hidden';
+                loginnext.style.display = 'none';
                // register.style.visibility = 'hidden';
                
-                logout.style.visibility = 'visible';
-                foo.style.visibility = 'visible';
+                logout.style.display = 'block';
+                foo.style.display = 'block';
                 
                 document.getElementById('username').value ="";
                 document.getElementById('password').value ="";
-                document.getElementById('userform').style.visibility = "visible";
+                
+                document.getElementById('userform').style.display = 'block';
                  
              } else if(request.status === 403) {
                  alert("username / password is invalid ");
@@ -184,12 +185,13 @@ logout.onclick = function(){
                 console.log("user logged-out");
               //  alert("Logged-out Successfully!");
                 
-                loginnext.style.visibility = 'visible';
+                loginnext.style.display = 'block';
                // register.style.visibility = 'visible';
                 
-                logout.style.visibility = 'hidden';
-                foo.style.visibility = 'hidden';
-                document.getElementById('userform').style.visibility = "hidden";
+                logout.style.display = 'none';
+                foo.style.display = 'none';
+                document.getElementById('userform').style.display = 'none';
+                
            } else if(request.status === 500) {
                  alert("Something is wrong on the Server");
            }
