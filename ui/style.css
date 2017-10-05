@@ -2,6 +2,9 @@ body {
     font-family: sans-serif;
     background-color: #e8e8e8;
     background-image : url("https://cdn.shopify.com/s/files/1/1050/2410/products/brass_tiffin_6.png?v=1462351107");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
     margin-top: 50px;
 }
 
