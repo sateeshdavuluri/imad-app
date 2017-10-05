@@ -261,14 +261,14 @@ var mnitems = document.getElementById("menu_north");
 menutype.onchange= function(){
    
  if(menutype.selectedIndex == 1){
-        msitems.style.visibility = 'visible';
-        mnitems.style.visibility =  'hidden';
+        msitems.style.display = 'block';
+        mnitems.style.display = 'none';
     }else if(menutype.selectedIndex == 2){
-        mnitems.style.visibility =  'visible';
-        msitems.style.visibility = 'hidden';
+        mnitems.style.display = 'block';
+        msitems.style.display = 'none';
     }else {
-        mnitems.style.visibility =  'hidden';
-        msitems.style.visibility = 'hidden';
+        mnitems.style.display = 'none';
+        msitems.style.display = 'none';
     }
 };
 
