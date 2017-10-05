@@ -1,9 +1,9 @@
 body {
     font-family: sans-serif;
-    background-color: #e8e8e8;
+    background-color: Tomato;
     background-image : url("http://ykantiques.com/wp-content/uploads/2014/01/018.jpg");
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: center center;
     background-attachment: fixed;
     background-size: cover;
     margin-top: 50px;
