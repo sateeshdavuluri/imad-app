@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     background-position: left center;
     background-attachment: fixed;
+    background-size: cover;
     margin-top: 50px;
 }
 
