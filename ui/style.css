@@ -19,6 +19,7 @@ body {
 .img-medium {
     
     background-size: cover;
+    display : inline ;
 }
 
  .container{
