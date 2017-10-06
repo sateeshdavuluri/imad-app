@@ -184,8 +184,10 @@ logout.onclick = function(){
          if(request.status === 200||request.status === 304){
                 console.log("user logged-out");
               //  alert("Logged-out Successfully!");
+              
+                var span = document.getElementsById('user_name');
+                span.innerHTML = "guest" ;
                 
-                span.inneHTML = "guest" ;
                 loginnext.style.display = 'block';
                // register.style.visibility = 'visible';
                 
