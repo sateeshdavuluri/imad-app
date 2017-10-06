@@ -185,8 +185,8 @@ logout.onclick = function(){
                 console.log("user logged-out");
               //  alert("Logged-out Successfully!");
               
-                var span = document.getElementsById('user_name');
-                span.innerHTML = "guest" ;
+                var span = document.getElementById('user_name');
+                    span.innerHTML = "guest" ;
                 
                 loginnext.style.display = 'block';
                // register.style.visibility = 'visible';
