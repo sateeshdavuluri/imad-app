@@ -185,6 +185,7 @@ logout.onclick = function(){
                 console.log("user logged-out");
               //  alert("Logged-out Successfully!");
                 
+                span.inneHTML = "guest" ;
                 loginnext.style.display = 'block';
                // register.style.visibility = 'visible';
                 
