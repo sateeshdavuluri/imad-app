@@ -27,7 +27,7 @@ app.use(session({
 
 app.get('/grocery.html',function(req,res){
     
-    res.senFi(path.join(__dirname,'ui','grocery.html'));
+    res.sendFile(path.join(__dirname,'ui','grocery.html'));
 });
 
 var counter =0;
