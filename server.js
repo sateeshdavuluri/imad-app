@@ -30,6 +30,16 @@ app.get('/grocery.html',function(req,res){
     res.sendFile(path.join(__dirname,'ui','grocery.html'));
 });
 
+app.get('/ui/grocerystyle.css',function(req,res){
+    res.senFile(path.join(__dirname,'ui','grocerystyle.css'));
+});
+
+app.get('/ui/grocerymain.js',function(req,res){
+    
+    res.senFile(path.join(__dirname,'ui','grocerymain.js'));
+    
+});
+
 var counter =0;
 app.get('/counter', function(req,res){
   counter = counter + 1;
