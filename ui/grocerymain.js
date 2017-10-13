@@ -1,4 +1,4 @@
-H
+
 		var toggle = 0;
 	    var gro=document.getElementById('category2');
 	   // var sub1 = document.getElementById("sub1");
@@ -7,7 +7,7 @@ H
 	  	// show sub menu
 	  	 var sub1 = document.getElementById("sub2");
 	  	 
-		 if(toggle == 0){
+		 if(toggle === 0){
 	    	 sub1.style.display = 'block';
 	    	 toggle = 1;
 	    } else {
@@ -21,7 +21,7 @@ H
 		var toggle2 = 0;
 	    var item1= document.getElementById("item1");
 	 	item1.onclick= function() {
-		if(toggle2 == 0){
+		if(toggle2 === 0){
 	 	document.getElementById('bdt').innerHTML ="MTR  1kg   50.00";
 	 	toggle2 = 1;} else{
 	 		document.getElementById('bdt').innerHTML = "";	
@@ -34,7 +34,7 @@ H
 	other.onchange = function() { 
 		if(other.value=="other") {document.getElementById("other2").style.display = "inline" ;} 
 		else { document.getElementById("other2").style.display ="none"; } 
-	 } 
+	 } ;
 	 
 //	price update
 	var price = document.getElementById("price") ;
