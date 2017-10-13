@@ -31,12 +31,12 @@ app.get('/grocery.html',function(req,res){
 });
 
 app.get('/ui/grocerystyle.css',function(req,res){
-    res.senFile(path.join(__dirname,'ui','grocerystyle.css'));
+    res.sendFile(path.join(__dirname,'ui','grocerystyle.css'));
 });
 
 app.get('/ui/grocerymain.js',function(req,res){
     
-    res.senFile(path.join(__dirname,'ui','grocerymain.js'));
+    res.sendFile(path.join(__dirname,'ui','grocerymain.js'));
     
 });
 
