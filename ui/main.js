@@ -81,7 +81,7 @@ submit.onclick = function(){
                 }
             }  */
             
-            for(var i=0;names.length;i++){
+            for(var i=0;i<names.length;i++){
                 list += "<li>"+names[i] +"</li>";
             }
             
