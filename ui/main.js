@@ -69,17 +69,22 @@ submit.onclick = function(){
             names = JSON.parse(names);
             var list ='';
             
-            // 10 recent comment to show
-            if(names.length<=10){
+            /*   10 recent comment to show
+              if(names.length<=10){
                 for(var i=names.length;i>0;i--){
                     list += '<li>' + names[i-1] +'</li>';
                 }
                 
-            } else {
+               } else {
                 for(var j=0,i=names.length;j<10;i--,j++){
                     list += '<li>' + names[i-1] +'</li>';
                 }
+            }  */
+            
+            for(var i=0;names.length;i++){
+                list += "<li>"+names[i] +"</li>";
             }
+            
            
             var ul = document.getElementById('namelist');
             ul.innerHTML = list;
