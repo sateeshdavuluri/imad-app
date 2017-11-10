@@ -1,17 +1,53 @@
- body{
-	  	background-color : powderblue;
+  body{
+	  	background-color : rgb(243,243,243);
 	  }
   h1{ text-align : center ;
   	  background-color : tomato ;
     } 
 	  
   ul{ list-style-type : none;
-	   background-color : lightgreen;
+  	  width: 100%;
+  	  margin: 0;
+  	  padding: 0;
+  
+
 	 }
+  #category{
+  	
+  	overflow : hidden;
+  }
    a{ text-decoration : none ;
 	  display : inline-block;
 	 } 
 	
-  ul li select:active{ 
-  		background-color : lightblue;
-    } 
+  select,option:active{ 
+  		background-color : lightgreen;
+    }
+   
+    .newlist{ 
+     	margin : 1px;
+        padding:1px; 
+        background-color: rgba(100,50,0,0.3); 
+     
+        text-align: center ; 
+        font-size: 20px;
+        font-weight: bold;
+        width : 25%;
+        height: 1.5em;
+
+     }	
+     
+     [id^="newlistdiv"]{ 
+        margin: 10px 10px 0 0px;
+        padding: 1px 10px;
+        background: url("staples1.jpg") ;
+        font-size: 20px;
+        max-height: 300px;
+        overflow: scroll;
+        display: none;
+        
+        }
+     [id $= "star"] {  
+     	color : red;
+     	font-size: 20px;
+     }
